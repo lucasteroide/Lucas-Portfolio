@@ -27,7 +27,7 @@ function change(element,a,b,visualchanges,imgchange, imgchange2){
     if (element.style.position === b){
         element.style.position = a
         visualchanges.style.border = "solid black 1px"
-        imgchange.src ="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/Test%20recadrage.jpg"
+        imgchange.src ="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/Test-recadrage.jpg"
         imgchange2.src = "https://lucasteroide.github.io/LucasPortfolio.github.io/Images/malette-large.png"
 
 
