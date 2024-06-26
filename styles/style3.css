@@ -1,7 +1,4 @@
-.center{
-    display: flex;
-    justify-content: center;
-}
+
 .image{
     display: flex;
     justify-content: space-between;
@@ -29,7 +26,7 @@ footer a {
     color:black;
 }
 h1 {
-    background-color: darkgray;
+
     z-index: 0;
 }
 #mousefollow {
@@ -47,4 +44,22 @@ h1 {
     width: 25px;
     transition: all ease-out;
     cursor: none;
+}
+#logo{
+    max-height:48px;
+    width:auto;
+    margin-right:24px;
+}
+.flex-header{
+    display: flex;
+    background-color: darkgray;
+    height: 48px;
+    justify-content: space-between;
+    align-items: center;
+}
+h1{
+    flex-grow: 1;
+    text-align: center;
+    position: relative;
+    right: 35px;
 }

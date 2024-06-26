@@ -10,6 +10,9 @@ const hide = document.querySelector(".hide")
 const imageChanging = document.querySelector("#Changing-image")
 const imageChanging2 = document.getElementById("malette")
 const mouse = document.querySelector(".mousefollow")
+const clickable = document.getElementsByClassName("clickable")
+
+
 function AddText(){
     if (projets.style.display !== "none"){
         projets.style.display = "none";
@@ -23,6 +26,15 @@ function AddText(){
         text.style.fontFamily = "Arial Black"
     }
 }
+function Grossir(){
+    mouse.style.scale="1.80"
+    mouse.style.transform = "translate(-30%,-30%)"
+}
+function Reduire(){
+    mouse.style.scale="1"
+    mouse.style.transform = "translate(-50%,-50%)"
+}
+
 function change(element,a,b,visualchanges,imgchange, imgchange2){
     if (element.style.position === b){
         element.style.position = a
@@ -38,6 +50,16 @@ function change(element,a,b,visualchanges,imgchange, imgchange2){
         imgchange.src ="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/develop_time-removebg-preview.png"
     }
 }
+
+/*clickable.addEventListener("mouseover",(e)=>{
+    mouse.style.scale="1.80"
+    console.log("Test")
+    mouse.style.transform = "translate(-30%,-30%)"
+})
+clickable.addEventListener("mouseout",(e)=>{
+    mouse.style.scale="1"
+    mouse.style.transform = "translate(-50%,-50%)"
+})*/
 navkeyright.addEventListener("click", (e) => {
     AddText()
 })
@@ -57,7 +79,18 @@ pinButton.addEventListener("click",(e) => {
 
 })
 window.addEventListener("mousemove", (e) => {
-    console.log(e)
     mouse.style.left = e.pageX + "px"
     mouse.style.top = e.pageY + "px"
 })
+document.body.addEventListener('mouseover', (event) => {
+    if (event.target.classList.contains("clickable")) {
+        mouse.style.scale="1.80"
+        mouse.style.transform = "translate(-30%,-30%)"
+    } else {
+        mouse.style.scale="1"
+        mouse.style.transform = "translate(-50%,-50%)"
+
+    }
+});
+
+

@@ -15,8 +15,10 @@
     <header>
         <nav class="navbar navbar-expand-sm bg-primary hide">
             <div class="container-fluid ">
-                <a class="navbar-brand" href="index.html">Mon Portfolio</a>
-                <a id="pin-button">📌</a>
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo clickable" src="/Images/logo.jpeg" alt="Logo">
+                </a>
+                <a id="pin-button" class="clickable">📌</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -26,18 +28,18 @@
 
                         <li class="nav-item dropdown">
 
-                            <a class="nav-link dropdown-toggle borders animate__animated animate__bounceInLeft" href="projets.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="projets">
+                            <a class="nav-link dropdown-toggle borders animate__animated animate__bounceInLeft clickable" href="projets.html" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="projets">
                                 Mes Projets
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item borders" href="projet-1.html">Projet 1</a></li>
-                                <li><a class="dropdown-item borders" href="projet-2.html">Projet 2</a></li>
-                                <li><a class="dropdown-item borders" href="projet-3.html">Projet 3</a></li>
+                                <li><a class="dropdown-item borders clickable" href="projet-1.html">Projet 1</a></li>
+                                <li><a class="dropdown-item borders clickable" href="projet-2.html">Projet 2</a></li>
+                                <li><a class="dropdown-item borders clickable" href="projet-3.html">Projet 3</a></li>
                             </ul>
 
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active borders animate__animated animate__bounceInLeft" aria-current="page" id="cv" href="cv.html">Mon CV</a>
+                            <a class="nav-link active borders animate__animated animate__bounceInLeft clickable" aria-current="page" id="cv" href="cv.html">Mon CV</a>
                         </li>
 
                     </ul>
@@ -50,20 +52,20 @@
         <div class="cartes">
 
             <div class="projets">
-                <a href="projets.html"> <img id="Changing-image" src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/Test-recadrage.jpg" alt="Une image de développeurs"></a>
+                <a href="projets.html"> <img class="clickable" id="Changing-image" src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/Test-recadrage.jpg" alt="Une image de développeurs"></a>
             </div>
             <div class="cv">
-                <a href="cv.html"><img id="malette" src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/malette-large.png" alt="Une image de développeur"></a>
+                <a href="cv.html"><img class ="clickable" id="malette" src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/malette-large.png" alt="Une image de développeur"></a>
             </div>
 
         </div>
         <div class="text-change">
-            <div class="navkeyleft">
-                <p>⬅️</p>
+            <div class="navkeyleft ">
+                <p class="clickable">⬅️</p>
             </div>
             <p class="arialblack">Voir mes projets</p>
             <div class="navkeyright">
-               <p>➡️</p>
+               <p class="clickable">➡️</p>
             </div>
         </div>
 
@@ -72,7 +74,7 @@
 
 <footer class="footer">
     <h2>Nous contacter</h2>
-    <a href="mailto:lucastredu33@gmail.com" class="borders"> <img src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/mail.jpg" alt="Mail" id="Mail"></a>
+    <a href="mailto:lucastredu33@gmail.com" class="borders clickable"> <img class="clickable" src="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/mail.jpg" alt="Mail" id="Mail"></a>
     <p>©2024 by Lucas Trembley</p>
 </footer>
 </body>

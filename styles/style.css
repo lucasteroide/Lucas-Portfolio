@@ -40,9 +40,9 @@ a {
     animation: animate__bounceInLeft;
     animation-duration: 1s;
 }
-.body{
-    height:1000px;
-    flex: 1 0 auto;
+body{
+    height:900px;
+    cursor:none;
 }
 .cv {
     display:none;
@@ -59,8 +59,8 @@ header {
     position:fixed;
     left:0;
     right:0;
-    z-index:1;
     height:75px;
+    cursor: none;
 }
 
 .descriptif{
@@ -89,20 +89,34 @@ header {
 }
 #pin-button{
     border:solid black 1px;
+
 }
 .hide{
     display: block;
 }
 #pin-button:hover{
-    cursor: grab;
+    cursor: none;
 }
 .mousefollow{
-    position:absolute;
-    height:30px;
-    width:30px;
-    border-radius:30px;
-    border:2px solid black;
-    transform: translate(-50%,-50%);
-    z-index: -1;
-    overflow: hidden;
+    position: fixed;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    left: -100px;
+    top: 50%;
+    mix-blend-mode: difference;
+    background-color: white;
+    z-index: 10000;
+    border: 2px solid white;
+    height: 25px;
+    width: 25px;
+    transition: all ease-out;
+    cursor: none;
+}
+.logo{
+    max-height:48px;
+    width:auto
+}
+.clickable{
+    cursor: none;
 }
