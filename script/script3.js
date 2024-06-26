@@ -6,6 +6,7 @@ const addTextSnap = document.querySelector(".addtextsnap")
 const imgInsta = document.querySelector("#resizeinsta")
 const imgSnap = document.querySelector("#resizesnapchat")
 const imgMail = document.querySelector("#resizemail")
+const logo = document.querySelector("#logo")
 document.body.addEventListener("mousemove", (e)=> {
     cursor.style.left = e.clientX + "px";
     cursor.style.top = e.clientY + "px";
@@ -73,3 +74,13 @@ window.onresize = function (){
     imgMail.style.width = tempwidth.toString() + "px"
     imgMail.style.height = "auto"
 }
+logo.addEventListener("mouseenter", (e)=> {
+    cursor.style.scale = "1.80";
+    cursor.style.transform = "translate(-30%,-30%)";
+})
+logo.addEventListener("mouseout", (e)=> {
+    cursor.style.scale="1";
+    cursor.style.transform = "translate(-50%,-50%)";
+    cursor.style.zIndex = "1000000"
+
+})
