@@ -1,19 +1,19 @@
 
 const cv = document.querySelector(".cv")
 const text = document.querySelector(".arialblack")
-const navkeyright = document.querySelector(".navkeyright")
-const navkeyleft = document.querySelector(".navkeyleft")
-const projets = document.querySelector(".projets");
+//const navkeyright = document.querySelector(".navkeyright")
+//const navkeyleft = document.querySelector(".navkeyleft")
+//const projets = document.querySelector(".projets");
 const pinButton = document.querySelector("#pin-button")
 const header = document.querySelector("header")
-const hide = document.querySelector(".hide")
+//const hide = document.querySelector(".hide")
 const imageChanging = document.querySelector("#Changing-image")
 const imageChanging2 = document.getElementById("malette")
 const mouse = document.querySelector(".mousefollow")
 const clickable = document.getElementsByClassName("clickable")
+let width = document.querySelector(".projets").getBoundingClientRect().width
 
-
-function AddText(){
+/*function AddText(){
     if (projets.style.display !== "none"){
         projets.style.display = "none";
         cv.style.display = "flex";
@@ -25,7 +25,7 @@ function AddText(){
         text.textContent="Voir mes projets"
         text.style.fontFamily = "Arial Black"
     }
-}
+}*/
 function Grossir(){
     mouse.style.scale="1.80"
     mouse.style.transform = "translate(-30%,-30%)"
@@ -34,33 +34,20 @@ function Reduire(){
     mouse.style.scale="1"
     mouse.style.transform = "translate(-50%,-50%)"
 }
+window.addEventListener("mousemove", (e) => {
+    mouse.style.left = e.x + "px"
+    mouse.style.top = e.y + "px"
 
-function change(element,a,b,visualchanges,imgchange, imgchange2){
-    if (element.style.position === b){
-        element.style.position = a
-        visualchanges.style.border = "solid black 1px"
-        imgchange.src ="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/Test-recadrage.jpg"
-        imgchange2.src = "https://lucasteroide.github.io/LucasPortfolio.github.io/Images/malette-large.png"
-
-
-    } else {
-        element.style.position = b
-        visualchanges.style.border = "none"
-        imgchange2.src = "https://lucasteroide.github.io/LucasPortfolio.github.io/Images/malette.png"
-        imgchange.src ="https://lucasteroide.github.io/LucasPortfolio.github.io/Images/develop_time-removebg-preview.png"
-    }
-}
-
+})
 /*clickable.addEventListener("mouseover",(e)=>{
     mouse.style.scale="1.80"
-    console.log("Test")
     mouse.style.transform = "translate(-30%,-30%)"
 })
 clickable.addEventListener("mouseout",(e)=>{
     mouse.style.scale="1"
     mouse.style.transform = "translate(-50%,-50%)"
 })*/
-navkeyright.addEventListener("click", (e) => {
+/*navkeyright.addEventListener("click", (e) => {
     AddText()
 })
 navkeyleft.addEventListener("click", (e) => {
@@ -72,25 +59,34 @@ document.addEventListener("keydown",(e)=> {
         AddText()
     }
 
-})
+})*/
 pinButton.addEventListener("click",(e) => {
-    console.log(e)
-    change(header,"fixed","relative",pinButton,imageChanging, imageChanging2)
+    if (header.style.position === "relative"){
+        header.style.position = "fixed"
+        pinButton.style.border = "solid black 1px"
+        document.querySelector(".body").style.marginTop = "70px"
+
+
+    } else {
+        header.style.position = "relative"
+        pinButton.style.border = "none"
+        document.querySelector(".body").style.marginTop = "0px"
+    }
 
 })
-window.addEventListener("mousemove", (e) => {
-    mouse.style.left = e.pageX + "px"
-    mouse.style.top = e.pageY + "px"
-})
-document.body.addEventListener('mouseover', (event) => {
+
+document.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains("clickable")) {
         mouse.style.scale="1.80"
         mouse.style.transform = "translate(-30%,-30%)"
+        mouse.style.transitionDuration="0.25s"
     } else {
         mouse.style.scale="1"
+        mouse.style.transitionDuration="0.25s"
         mouse.style.transform = "translate(-50%,-50%)"
-
+        mouse.style.transitionDuration="0s"
     }
 });
+
 
 
